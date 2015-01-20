@@ -1,2 +1,2 @@
 type briefing
-val create_report : briefing -> unit
+val create_report : briefing  -> unit
