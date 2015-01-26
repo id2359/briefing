@@ -1,5 +1,5 @@
 open Printf;;
 
 let  () =
-  let html = Web.get "http://www.smh.com.au" in
+  let html = Web.get Sys.argv.(1) in
   print_endline html;;
