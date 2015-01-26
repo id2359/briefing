@@ -1,4 +1,2 @@
-type reading        (** a datum grabbed from the web - eg tomorrows max temperature *)
-
-val read_url : string -> Parser.t -> reading
-val read_url_file : string -> reading list (** ditto - change *)
+type reading (** a datum grabbed from the web - eg tomorrows max temperature *)
+val collect : string -> string -> reading list  (** takes tag to dispatch on and parses html string *)
