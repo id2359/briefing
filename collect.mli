@@ -1,2 +1,5 @@
-type reading (** a datum grabbed from the web - eg tomorrows max temperature *)
+type reading = Rfloat of string * float
+	       | Rint of string * int
+	       | Rstring of string * string;;
+
 val collect : string -> string -> reading list  (** takes tag to dispatch on and parses html string *)
