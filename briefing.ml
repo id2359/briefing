@@ -1,3 +1,5 @@
-let main () =
+open Printf;;
+
+let  () =
   let html = Web.get "http://www.smh.com.au" in
-  print_string html
+  print_endline html;;
