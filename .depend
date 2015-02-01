@@ -1,0 +1,15 @@
+analyse.cmi : collect.cmi
+clips.cmi :
+collect.cmi :
+report.cmi : collect.cmi
+web.cmi :
+analyse.cmo : analyse.cmi
+analyse.cmx : analyse.cmi
+briefing.cmo : web.cmi collect.cmi
+briefing.cmx : web.cmx collect.cmx
+collect.cmo : collect.cmi
+collect.cmx : collect.cmi
+report.cmo : collect.cmi analyse.cmi report.cmi
+report.cmx : collect.cmx analyse.cmx report.cmi
+web.cmo : web.cmi
+web.cmx : web.cmi
