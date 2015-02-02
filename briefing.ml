@@ -5,4 +5,3 @@ let () =
   let reading_tag = Sys.argv.(2) in   
   let readings = Collect.collect reading_tag html in
   List.iter (fun r -> Collect.print_reading r ) readings;
-  print_endline "done!" (* will eventually create fuzzy clips facts from readings *)
