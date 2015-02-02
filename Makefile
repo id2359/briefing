@@ -2,7 +2,7 @@ OCAMLC=ocamlfind ocamlc
 OCAMLOPT=ocamlfind ocamlopt
 OCAMLDEP=ocamldep
 
-LIBS=curl 
+LIBS=curl str 
 
 P=briefing
 
