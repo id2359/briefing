@@ -6,8 +6,8 @@ type reading = Rfloat of string * float
 let get_match pattern s =
   try 
     ignore(Str.search_forward pattern s 0);
-    Str.matched_string s
-  with Not_found -> "-9999";;
+    Str.matched_group 1  s in
+  with Not_found -> "-9999.00";;
 
 let print_reading r = match r with
   | Rfloat (tag, value) -> print_endline ( tag ^ "=" ^  string_of_float value )
@@ -15,7 +15,7 @@ let print_reading r = match r with
   | Rstring (tag, value) -> print_endline ( tag ^ "=" ^ value )
 
 let collect_weather html =
-  let pattern = Str.regexp "tempnow\">\\(.*\\)\°C</span>" in
+  let pattern = Str.regexp "class=\"tempnow\">\\(.*?\\)&deg;C</span>" in
   let temperature =
     float_of_string ( get_match pattern html )
   in
