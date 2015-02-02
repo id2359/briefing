@@ -6,7 +6,7 @@ type reading = Rfloat of string * float
 let get_match pattern s =
   try 
     ignore(Str.search_forward pattern s 0);
-    Str.matched_group 1  s in
+    Str.matched_group 1  s
   with Not_found -> "-9999.00";;
 
 let print_reading r = match r with
