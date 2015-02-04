@@ -2,6 +2,8 @@ type reading = Rfloat of string * float
 	       | Rint of string * int
 	       | Rstring of string * string;;
 
+type strategy = Pattern of string (* regexp string *)
+		| Parser of ( string -> reading )
 
 let get_match pattern s =
   try 
