@@ -1,0 +1,3 @@
+# a comment
+get weather as float in celsius from http://nnn  using regexp "kkkkkkk"
+get birthdays as string from /Users/frug/Dropbox/birthdays.txt using function get_coming_birthdays  # looks up "get_coming_birthdays" in dispatch hashtable
