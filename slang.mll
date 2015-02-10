@@ -1,6 +1,5 @@
 {
-  open SlangParser
-  exception Eof
+  open Slangparser
 }
 
 let alpha = ['a'-'z']
