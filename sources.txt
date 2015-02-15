@@ -1,2 +1,4 @@
-get weather as float in celsius from http://nnn  using regexp "kkkkkkk"
-get birthdays as string using function check_birthdays
+# a comment
+get weather as float in celsius from http://nnn  using regexp "kkkkkkk”
+get birthdays as string from /Users/frug/birthdays.txt using function birthday_lookup
+
